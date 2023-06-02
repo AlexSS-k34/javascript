@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: lightblue;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        main{
+            margin: auto;
+            margin-top: 150px;
+            max-width: 500px;
+            text-align: center;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Olá, Mundo!!</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto unde sunt commodi sequi! Commodi officiis possimus nostrum quaerat dolore nobis, quis repellat autem assumenda quibusdam ipsa non aut. Dolorem, nulla.</p>
+    </main>
+
+    <script>
+
+        /* 
+        Number.parseInt() tranforma o valor de uma variavel em inteiro.
+        Number.parseFloat() tranforma o valor de uma variavel em float.
+        Number() transforma o valor em um numero, independente dele sendo float ou int.  
+         */
+
+        /* 
+        String(n) 
+        n.toString() 
+        Essas duas funções transforma um valor em string.
+        */
+
+        var n1 = Number(window.prompt('Digite um numero: '))
+        var n2 = Number(window.prompt('Agora um outro numero: '))
+        soma = n1 + n2
+        window.alert(`A soma entre ${n1} e ${n2} é igual: ${soma}`)
+    </script>
+</body>
+</html>
