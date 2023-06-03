@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendendo a usar o DOM</title>
+    <style>
+        body{
+            background-color: aqua;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        main{
+            margin: auto;
+            margin-top: 150px;
+            text-align: center;
+            border: 2px solid black;
+            max-width: 500px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Utilizado o DOM.</h1>
+        <p>Atravez do elemento <strong>document</strong> no javascript podemos fazer alterações no HTML.</p>
+    </main>
+
+    <script>
+        var body = window.document.body
+        var main = body.getElementsByTagName('main')[0]
+
+        // DOM == Document Object Model
+        
+        /* 
+        body.style.backgroundColor = "blue"
+        main.style.backgroundColor = "white"
+        var p1 = body.getElementsByTagName("p")[0]
+        p1.getElementsByTagName('strong')[0].style.fontStyle = 'italic'
+        p1.getElementsByTagName('strong')[0].style.textDecoration = 'underline'
+        main.style.fontSize = '1.5em' 
+        */
+
+        // querySelector() facilita a vida.
+
+        body.style.backgroundColor = "blue"
+        main.style.backgroundColor = "white"
+        main.style.fontSize = "1.5em"
+        body.querySelector("p>strong").style.fontStyle = 'italic'
+        body.querySelector("p>strong").style.textDecoration = 'underline'
+        </script>
+</body>
+</html>
