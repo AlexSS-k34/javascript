@@ -13,15 +13,18 @@
             margin: 0;
         }
         main{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             background-color: rgb(176, 235, 176);
-            margin: auto;
-            margin-top: 100px;
             max-width: 500px;
             min-height: 300px;
-            padding-top: 80px;
+            padding: 80px 20px 20px 20px;
             text-align: center;
             border: 2px solid black;
             border-radius: 50px;
+            box-shadow: 0 0 15px rgb(0, 0, 0);
         }
         fieldset{
             width: 400px;
@@ -35,20 +38,30 @@
         input{
             font-size: 1.1em;
         }
+        div.topo{
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.200);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.295);
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
+    <div class="topo">
+        <label for="bgcor">Troque a cor do fundo: </label>
+        <input type="color" name="bgcor" id="bgcor">
+    </div>
     <main>
         <form action="" method="get">
             <fieldset>
                 <legend>Soma de Numeros</legend>
                 <p>
                     <label for="num1">Escolha um numero: </label>
-                    <input type="number" name="num1" id="num1" placeholder="0" oninput="soma()">
+                    <input type="number" name="num1" id="num1" placeholder="0">
                 </p>
                 <p>
                     <label for="num2">Escolha outro numero: </label>
-                    <input type="number" name="num2" id="num2" placeholder="0" oninput="soma()">
+                    <input type="number" name="num2" id="num2" placeholder="0">
                 </p>
                 <output id="saida">0</output>
                 
@@ -57,13 +70,17 @@
         </form>
 
         <script>
+            // Posso simplificar, apenas colocando o onclick="" e os oninput="" direto no html, mas decidi fazer tudo pelo javascript.
+
             var num1 = document.getElementById('num1')
             var num2 = document.getElementById('num2')
             var saida = document.getElementById('saida')
             var limpar = document.getElementById('limpar')
-            num1.addEventListener('Input', soma)
-            num2.addEventListener('Input', soma)
+            var bgcor = document.getElementById('bgcor')
+            num1.addEventListener('input', soma)
+            num2.addEventListener('input', soma)
             limpar.addEventListener("click", reset)
+            bgcor.addEventListener("input", trocarCor)
 
             function soma(){
                 saida.innerText = Number(num1.value) + Number(num2.value)
@@ -71,6 +88,10 @@
 
             function reset(){
                 saida.innerText = 0
+            }
+
+            function trocarCor(){
+                document.body.style.backgroundColor = bgcor.value
             }
         </script>
     </main>
