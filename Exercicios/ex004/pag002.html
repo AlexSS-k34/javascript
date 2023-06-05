@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: aquamarine;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        div#d1{
+            margin: auto;
+            margin-top: 200px;
+            background-color: rgb(255, 255, 118);
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="d1">
+        <p>Aqui!!!!</p>
+    </div>
+
+    <script>
+        var d1 = document.querySelector('#d1')
+        d1.addEventListener('click', clicou)
+        d1.addEventListener('mouseenter', entrou)
+        d1.addEventListener('mouseout', saiu)
+
+        function clicou() {
+            d1.innerText = 'HAHA, vc Clicou!!!!'
+            d1.style.backgroundColor = 'green'
+        }
+        
+        function entrou() {
+            d1.innerText = 'Entrou'
+            d1.style.backgroundColor = 'red'
+            d1.style.color = '#fff'
+        }
+        function saiu() {
+            d1.innerText = 'Saiu'
+            d1.style.backgroundColor = 'yellow'
+            d1.style.color = '#000'
+        }
+    </script>
+</body>
+</html>
