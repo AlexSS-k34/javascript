@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: bisque;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        main{
+            margin: auto;
+            margin-top: 180px;
+            padding: 10px;
+            max-width: 450px;
+            min-height: 150px;
+            text-align: center;
+            background-color: aliceblue;
+            border: 2px solid black;
+            border-radius: 20px;
+        }
+        main #vel{
+            width: 50px;
+        }
+        main #saida{
+            display: block;
+            font-weight: bold;
+            font-size: 1.2em;
+            color: yellow;
+            margin-bottom: 15px;
+            text-shadow: 1px 1px 4px black;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Verifique se foi multado.</h1>
+        <p>
+            <label for="vel">Velocidade do carro</label>
+            <input type="number" name="vel" id="vel">km
+        </p>
+        <output id="saida">Aguardando...</output>
+        <button type="button" onclick="calc()">Calcular</button>
+    </main>
+
+    <script>
+        function calc(){
+            var vel = document.getElementById('vel')
+            var vel_max = 60
+            var saida = document.getElementById('saida')
+            if (Number(vel.value) <= vel_max){
+                saida.innerText= 'Parabens, continue assim.'
+                saida.style.color= 'green'
+            }
+            else{
+                saida.innerText= 'Voçe foi MULTADO por excesso de velocidade.'
+                saida.style.color= 'red'
+                
+            }
+        }
+    </script>
+</body>
+</html>
