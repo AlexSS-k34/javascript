@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Período do Dia</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h1>Hora do Dia</h1>
+        <section>
+            <h2 id="hora-txt">(texto)</h2>
+            <div id="imagem"></div>
+        </section>
+    </main>
+    
+    <script>
+        var hora = new Date().getHours()
+        if (hora >= 6 && hora < 12){
+            document.body.style.backgroundColor = "#fccf99"
+            document.getElementById("hora-txt").innerText = `Agora são ${hora} Horas` 
+            document.getElementById("imagem").style.backgroundImage = "url(imagens/manha.jpg)"
+            document.getElementById("imagem").style.backgroundPosition = "center center"
+        }
+        else if (hora < 6){
+            document.body.style.backgroundColor = "#636363"
+            document.getElementById("hora-txt").innerText = `Agora são ${hora} Horas`
+            document.getElementById("imagem").style.backgroundImage = "url(imagens/madrugada.jpg)"
+            document.getElementById("imagem").style.backgroundPosition = "left center"
+        }
+        else if (hora < 18){
+            document.body.style.backgroundColor = "#745024"
+            document.getElementById("hora-txt").innerText = `Agora são ${hora} Horas`
+            document.getElementById("imagem").style.backgroundImage = "url(imagens/tarde.jpg)"
+            document.getElementById("imagem").style.backgroundPosition = "left center"
+        }
+        else if (hora < 24){
+            document.body.style.backgroundColor = "#1f1f1f"
+            document.getElementById("hora-txt").innerText = `Agora são ${hora} Horas`
+            document.getElementById("imagem").style.backgroundImage = "url(imagens/noite.jpg)"
+            document.getElementById("imagem").style.backgroundPosition = "center center"
+        }
+
+    </script>
+</body>
+</html>
