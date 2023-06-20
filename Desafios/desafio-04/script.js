@@ -14,7 +14,8 @@ function contar(){
     saida = document.querySelector("#saida>p")
     
     if (inicio.value.length == 0 || fim.value.length == 0 || passos.value.length == 0){
-        alert('Prencha todos os campos requisitados ')
+        alert('[ERRO] Prencha todos os campos requisitados ')
+        saida.innerText = "Não foi possivel contar..."
         
     } else{
         saida.innerText = "Contando:"
@@ -22,8 +23,21 @@ function contar(){
         fim = Number(fim.value)
         passos = Number(passos.value)
 
-        for (let i = inicio;i <= fim;i += passos){
-            saida.innerText += ` \u{1f449} ${i}`
+        if (passos <= 0){
+            // Para evitar um loop infinito, passos deve ser maior que 0.
+            alert('[ERRO] Passos invalido: Considerando PASSOS = 1')
+            passos = 1
+        }
+        if (inicio <= fim){
+            // Contagem Crescente
+            for (let i = inicio;i <= fim;i += passos){
+                saida.innerText += ` \u{1f449} ${i}`
+            }
+        } else if (inicio > fim){
+            // Contagem Decrecente
+            for (let i = inicio;i >= fim;i -=passos){
+                saida.innerText += ` \u{1f449} ${i}`
+            }
         }
     }
 }
