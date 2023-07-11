@@ -1,0 +1,36 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --verde: #33EC71;
+    --preto: #000000;
+    --amarelo: #EA9010;
+    --cinza: #3C787E;
+    --roxo: #820263;
+}
+
+body{
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--verde);
+    padding: 50px;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid white;
+    height: calc(100vh - 100px);
+}
+
+#relogio{
+    width: 80%;
+    height: 300px;
+    border-radius: 25px;
+    border: 2px solid #ea8f1048;
+    box-shadow: 0px 0px 30px #ea8f1071;
+}
