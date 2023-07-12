@@ -13,10 +13,11 @@
 }
 
 body{
-    background-color: black;
+    background-color: var(--cinza);
     font-family: Arial, Helvetica, sans-serif;
     color: var(--verde);
-    padding: 50px;
+    font-size: 70px;
+    padding: 30px;
 }
 
 main{
@@ -24,13 +25,18 @@ main{
     align-items: center;
     justify-content: center;
     border: 2px solid white;
-    height: calc(100vh - 100px);
+    height: calc(100vh - 60px);
+    background-color: black;
 }
 
 #relogio{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 80%;
     height: 45vh;
     border-radius: 25px;
     border: 2px solid #ea8f1048;
     box-shadow: 0px 0px 30px #ea8f1071;
+}
 }
