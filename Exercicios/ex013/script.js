@@ -31,3 +31,15 @@ const meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julh
 
 document.write(`<p> ${meses[0]}, ${meses[1]}, ${meses[2]}, ${meses[3]}, ${meses[4]}, ${meses[5]}, ${meses[6]}, ${meses[7]}, ${meses[8]}, ${meses[9]}, ${meses[10]}, ${meses[11]} </p> <hr>`)
 //======================================================
+
+document.write("<h2> Objeto jogo </h2>")
+
+const jogoObj = {
+    jogo: "The Last Of Us 2",
+    desenvolvedora: "Naughty Dog",
+    anoLancamento: 2020
+}
+
+document.write(`<p> Jogo: ${jogoObj.jogo} </p>`)
+document.write(`<p> Desenvolvido por: ${jogoObj.desenvolvedora} </p>`)
+document.write(`<p> Ano de Lançamento: ${jogoObj.anoLancamento} </p>`)
