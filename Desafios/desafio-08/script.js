@@ -1,4 +1,3 @@
-document.write(" <h2>Informações </h2>")
 
 let nomeLutador = "Anderson Silva" 
 let nacLutador = "Brasilero"
@@ -6,6 +5,21 @@ let idadeLutador = 48
 let pesoLutador = 84.4
 let alturaLutador = 1.88
 
+document.write(`
+    <div class="cardLutador">
+        <h2>Lutador</h2>
+        <div>
+            <img src="imagens/imgLutador.jpg">
+        </div>
+        <div>
+            <p> ${nomeLutador} </p>
+            <p> ${nacLutador} </p>
+            <p> ${idadeLutador} anos </p>
+            <p> ${pesoLutador} Kg </p>
+            <p> ${alturaLutador} m </p>
+        </div>
+    </div>
+`)
 //=====================================================
 
 document.write("<h2> Frase do Dia </h2>")

@@ -3,3 +3,37 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+body{
+    padding: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.cardLutador{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #303030;
+    width: 250px;
+    padding: 10px;
+    border: 5px solid #808080;
+    color: white;
+    border-radius: 10px;
+}
+
+.cardLutador img{
+    border: 4px solid #808080;
+    border-radius: 10px;
+    width: 200px;
+    margin-top: 10px;
+}
+
+.cardLutador p{
+    color: black;
+    background-color: white;
+    width: 200px;
+    margin: 5px 0;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+}
