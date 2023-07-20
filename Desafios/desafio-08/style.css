@@ -79,3 +79,34 @@ body{
 .arrayMeses p{
     margin: 5px 0 0 0;
 }
+
+.cardJogo{
+    width: 300px;
+    height: 300px;
+    margin: 30px 0 0 0;
+    padding: 15px;
+    background-image: url(imagens/imgJogo.jpg);
+    background-position: center center;
+    background-size: cover;
+    border: 2px solid #303030;
+    border-radius: 15px;
+}
+
+.cardJogo h2{
+    color: white;
+    text-shadow: 1.5px 1.5px 0 black;
+    margin: 5px 0 30px 0;
+}
+
+.titulo{
+    color: white;
+    text-shadow: 1px 1px 0 black;
+    margin: 5px 0 3px 0;
+}
+
+.conteudo{
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    border: 1px solid #303030;
+    border-radius: 8px;
+}

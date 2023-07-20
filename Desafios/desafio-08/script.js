@@ -48,8 +48,6 @@ document.write(`
     `)
 //======================================================
 
-document.write("<h2> Objeto jogo </h2>")
-
 const jogoObj = {
     jogo: "The Last Of Us 2",
     desenvolvedora: "Naughty Dog",
@@ -57,7 +55,13 @@ const jogoObj = {
 }
 
 document.write(`
-    <p> Jogo: ${jogoObj.jogo} </p>
-    <p> Desenvolvido por: ${jogoObj.desenvolvedora} </p>
-    <p> Ano de Lançamento: ${jogoObj.anoLancamento} </p>
+    <div class="cardJogo">
+        <h2> jogo </h2>
+        <p class="titulo"> Título: </p>
+        <p class="conteudo"> ${jogoObj.jogo} </p>
+        <p class="titulo"> Desenvolvido por: </p>
+        <p class="conteudo"> ${jogoObj.desenvolvedora} </p>
+        <p class="titulo"> Ano de Lançamento: </p>
+        <p class="conteudo"> ${jogoObj.anoLancamento} </p>
+    </div>
 `)
