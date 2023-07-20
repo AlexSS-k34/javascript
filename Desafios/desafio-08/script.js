@@ -22,7 +22,6 @@ document.write(`
 `)
 //=====================================================
 
-document.write("<h2> Frase do Dia </h2>")
 
 const dia = 10
 const mes = 9
@@ -31,8 +30,12 @@ const frase = "Toda manhã você tem duas escolhas: continuar dormindo com seus 
 const autor = "Desconhecido"
 
 document.write(`
-    <p> ${dia}/${mes}/${ano} </p>
-    <p> ${frase} </p>
+    <div class="cardFrase">
+        <h2> Frase do Dia </h2>
+        <p> ${dia}/${mes}/${ano} </p>
+        <p class="frase"> "${frase}" </p>
+        <p> ${autor} </p>
+    </div>
 `)
 //=====================================================
 
