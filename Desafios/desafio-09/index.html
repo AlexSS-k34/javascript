@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Calculadora</h1>
+        <div>
+            <button id="btnSun" type="button" onclick="sun()">Sun</button>
+            <button id="btnMoon" type="button" onclick="moon()">Moon</button>
+        </div>
+    </header>
+    <main>
+        <div id="calculadora">
+            <div id="saida">
+                <output>hello</output>
+            </div>
+            
+            <div id="entrada">
+                <div>
+                    <table>
+                        <tr>
+                            <td onclick="limpar()">CA</td>
+                            <td onclick="voltar()">&larr;</td>
+                            <td onclick="num('/')">/</td>
+                            <td onclick="num('*')">*</td>
+                        </tr>
+                        <tr>
+                            <td onclick="num('7')">7</td>
+                            <td onclick="num('8')">8</td>
+                            <td onclick="num('9')">9</td>
+                            <td onclick="num('-')">-</td>
+                        </tr>
+                        <tr>
+                            <td onclick="num('4')">4</td>
+                            <td onclick="num('5')">5</td>
+                            <td onclick="num('6')">6</td>
+                            <td onclick="num('+')">+</td>
+                        </tr>
+                        <tr>
+                            <td onclick="num('1')">1</td>
+                            <td onclick="num('2')">2</td>
+                            <td onclick="num('3')">3</td>
+                            <td onclick="calc()" rowspan="2">=</td>
+                        </tr>
+                        <tr>
+                            <td onclick="calc('0')" colspan="2">0</td>
+                            <td onclick="calc('.')">.</td>
+                        </tr>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
