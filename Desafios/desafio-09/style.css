@@ -39,6 +39,7 @@ main{
 }
 
 #calculadora{
+    width: 290px;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
@@ -64,6 +65,7 @@ output{
     display: flex;
     align-items: center;
     justify-content: end;
+    overflow: hidden;
 }
 
 #entrada{
