@@ -3,7 +3,13 @@ var espaco = document.querySelector("#espaco")
 var body = document.querySelector("body")
 
 btnLimpar.addEventListener("click", () => {
-    espaco.textContent = "Limpou a tela "
+    if (espaco.textContent == "Limpou a tela "){
+        espaco.textContent = ""
+    } else if(espaco.textContent == ""){
+        espaco.textContent = ""
+    } else{
+        espaco.textContent = "Limpou a tela "
+    }
 })
 
 espaco.addEventListener("click", () => {
